@@ -1,3 +1,3 @@
 a = input("Введите название города:")
 b = input("Введите номер дома:")
-print("Echo:", str (a) ,(b))
+print(f"Echo: {a},{b}")
