@@ -15,3 +15,4 @@ result = fun(int(x), int(y))
 passed = time.time() - start
 print(f"Сумма = {result}")
 print(f"Затраченное время {passed}  секунд")
+print("the END")
