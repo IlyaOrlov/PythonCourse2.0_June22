@@ -15,6 +15,7 @@
 
 
 # Ответ:
+
     import math
 
   def square(r):
@@ -25,21 +26,16 @@
        print(f"Площадь круга {result}")
 
 #2.
-
-start = input("Топлива было: "); end = input("Топлива осталось: ") # несколько операторов в одной строке (точка с запятой)
-
-distance = input("Расстояние: ")
-
-diff = int(start) - int(end)
-
-result = diff / distance # Не правельный расчет, целочисленный тип данных int отсутсвует.
-
-print # Нет переменной для вывода
+# start = input("Топлива было: "); end = input("Топлива осталось: ") # несколько операторов в одной строке (точка с запятой)
+# distance = input("Расстояние: ")
+# diff = int(start) - int(end)
+# result = diff / distance # Не правельный расчет, целочисленный тип данных int отсутсвует.
+# print # Нет переменной для вывода
 
 #Исправлено:
 
 start = input("Топлива было :" )
-end = input(Топлива "осталось :" )
+end = input("Топлива осталось :")
 distance = input("Расстояние :" )
 diff = int(start) - int(end)
 result = (int(diff) * int(distance))/100
