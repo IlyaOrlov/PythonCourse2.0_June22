@@ -21,9 +21,9 @@
   def square(r):
   return math.pi * r ** 2
 
-       radius = input("Введите радиус :")
-       result = square(int(radius))
-       print(f"Площадь круга {result}")
+radius = input("Введите радиус :")
+result = square(int(radius))
+print(f"Площадь круга {result}")
 
 #2.
 # start = input("Топлива было: "); end = input("Топлива осталось: ") # несколько операторов в одной строке (точка с запятой)
