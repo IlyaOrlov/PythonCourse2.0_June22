@@ -14,7 +14,7 @@
 #  import math # Импортируемые библеотеки в начале.
 
 
-Ответ:
+# Ответ:
 
     import math
 
@@ -38,5 +38,5 @@ start = input("Топлива было :")
 end = input('Топлива осталось :')
 distance = input("Расстояние :")
 diff = float(start) - float(end)
-result = (float(diff) * float(distance))/100
+result = (float(diff) / float(distance))*100
 print(result)
