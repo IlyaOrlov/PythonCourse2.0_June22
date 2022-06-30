@@ -14,7 +14,7 @@
 #  import math # Импортируемые библеотеки в начале.
 
 
-# Ответ:
+Ответ:
 
     import math
 
@@ -29,14 +29,14 @@ print(f"Площадь круга {result}")
 # start = input("Топлива было: "); end = input("Топлива осталось: ") # несколько операторов в одной строке (точка с запятой)
 # distance = input("Расстояние: ")
 # diff = int(start) - int(end)
-# result = diff / distance # Не правельный расчет, целочисленный тип данных int отсутсвует.
+# result = diff / distance # Не правельный расчет и тип данных.
 # print # Нет переменной для вывода
 
 #Исправлено:
 
-start = input("Топлива было :" )
-end = input("Топлива осталось :")
-distance = input("Расстояние :" )
-diff = int(start) - int(end)
-result = (int(diff) * int(distance))/100
+start = input("Топлива было :")
+end = input('Топлива осталось :')
+distance = input("Расстояние :")
+diff = float(start) - float(end)
+result = (float(diff) * float(distance))/100
 print(result)
