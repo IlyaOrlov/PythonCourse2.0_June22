@@ -1,5 +1,3 @@
-print("Новая задача")
-
 import time
 
 
