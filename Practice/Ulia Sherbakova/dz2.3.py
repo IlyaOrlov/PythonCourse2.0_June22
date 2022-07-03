@@ -67,7 +67,7 @@ def main():
             Shuffler.rename(args.dirname, args.output)
     elif args.subcommand == 'restore':
         Shuffler.restore(args.dirname, args.restore_map)
-    else:  #нет отступа
+    else:
         sys.exit()
 
 
