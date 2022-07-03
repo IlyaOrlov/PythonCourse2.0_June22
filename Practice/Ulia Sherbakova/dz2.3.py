@@ -41,7 +41,7 @@ class shuffler: #имя класса должно следовать согла�
         os.rename(path + '/' + hashname, path + '/' + self.map[hashname])) #лишняя скобка в конце
         os.remove(restore_path)
 
-    def generateName(self, seed=time()): #имя функции должно состоять из маленьких букв
+    def generateName(self, seed=time()): #имя функции должно состоять из маленьких букв и нет отступов от =
         return hashlib.md5(str(seed)).hexdigest()
 
 
