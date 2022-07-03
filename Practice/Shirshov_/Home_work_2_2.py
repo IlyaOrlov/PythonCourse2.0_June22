@@ -5,8 +5,8 @@ end = int(input("Топлива осталось: "))  # ввод исходны
 distance = int(input("Расстояние: "))  # ввод исходных данных
 
 
-diff = start - end    # расчет
-result = diff / distance     # расчет
+diff = start - end
+result = diff / distance
 
 
 print(f"Средний расход бензина составляет: {result}")   # вывод на экран
