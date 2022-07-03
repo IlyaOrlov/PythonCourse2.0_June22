@@ -29,8 +29,8 @@ class shuffler: #имя класса должно следовать согла�
     def restore(self, dirname, restore_path):
         with open(filename, '+') as f:
             self.map = ast.literal_eval(f.read())
-        mp3s = [] #нет выравнивания
-
+        mp3s = []
+#нет отступа
     for root, directories, files in os.walk(dirname):
         for file in files:
             if file[-3:] == '.mp3':
@@ -54,7 +54,7 @@ def parse_arguments():
     restore_parser.add_argument('dirname')
     restore_parser.add_argument('restore_map')
     args = parser.parse_args()
-    return args #требуется больше отступов
+    return args
 
 
 def main():
