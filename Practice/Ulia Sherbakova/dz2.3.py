@@ -47,11 +47,11 @@ class shuffler: #имя класса должно следовать согла�
 
 def parse_arguments():
     parser = argparse.ArgumentParser()
-    subparsers = parser.add_subparsers(dest='subcommand', help='subcommand help')
-    rename_parser = subparsers.add_parser('rename', help='rename help')
+    subparsers = parser.add_subparsers(dest='subcommand', help='subcommand help') #нет пробелов от знака =
+    rename_parser = subparsers.add_parser('rename', help='rename help') #нет пробелов от знака =
     rename_parser.add_argument('dirname')
-    rename_parser.add_argument('-o', '--output', help='path to a file where restore map is stored') #длина строки не должна превышать 79 символов
-    restore_parser = subparsers.add_parser('restore', help="command_a help")
+    rename_parser.add_argument('-o', '--output', help='path to a file where restore map is stored') #длина строки не должна превышать 79 символов и нет пробелов от знака =
+    restore_parser = subparsers.add_parser('restore', help="command_a help") #нет пробелов от знака =
     restore_parser.add_argument('dirname')
     restore_parser.add_argument('restore_map')
     args = parser.parse_args()
