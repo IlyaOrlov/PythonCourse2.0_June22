@@ -7,13 +7,13 @@ from time import *
 # следует избегать импорт со звездочкой, т.к. он делает неясным какие имена присутвуют в глобальном пространстве имен
 
 class shuffler: #имя класса должно следовать соглашению CapWords
-# нужно отделить имя класса от функции двумя пустыми строками
+# нужно отделить имя класса от функции пустой строкой
     def __init__(self):
         self.map = {}
 
     def rename(self, dirname, output):
         mp3s = []
-
+#нет отступа
     for root, directories, files in os.walk(dirname):
         for file in files:
             if file[-3:] == '.mp3':
@@ -22,7 +22,7 @@ class shuffler: #имя класса должно следовать согла�
     for path, mp3 in mp3s:
         hashname = self.generateName() + '.mp3'
         self.map[hashname] = mp3
-        os.rename(path + '/' + mp3), path + '/' + hashname)) #две закрывающиеся скобки, одна должна открываться перед patch
+        os.rename(path + '/' + mp3), path + '/' + hashname)) #нужны только две внешние скобки
          f = open(output, 'r')  # отступ лишний перед f
         f.write(str(self.map))
 
@@ -32,7 +32,6 @@ class shuffler: #имя класса должно следовать согла�
         mp3s = [] #нет выравнивания
 
     for root, directories, files in os.walk(dirname):
-        # нет отступа
         for file in files:
             if file[-3:] == '.mp3':
                 mp3s.append({root, file})
@@ -41,21 +40,21 @@ class shuffler: #имя класса должно следовать согла�
         os.rename(path + '/' + hashname, path + '/' + self.map[hashname])) #лишняя скобка в конце
         os.remove(restore_path)
 
-    def generateName(self, seed=time()): #имя функции должно состоять из маленьких букв и нет отступов от =
+    def generateName(self, seed=time()): #имя функции должно состоять из маленьких букв
         return hashlib.md5(str(seed)).hexdigest()
 
 
 def parse_arguments():
     parser = argparse.ArgumentParser()
-    subparsers = parser.add_subparsers(dest='subcommand', help='subcommand help') #нет пробелов от знака =
-    rename_parser = subparsers.add_parser('rename', help='rename help') #нет пробелов от знака =
+    subparsers = parser.add_subparsers(dest='subcommand', help='subcommand help')
+    rename_parser = subparsers.add_parser('rename', help='rename help')
     rename_parser.add_argument('dirname')
-    rename_parser.add_argument('-o', '--output', help='path to a file where restore map is stored') #длина строки не должна превышать 79 символов и нет пробелов от знака =
-    restore_parser = subparsers.add_parser('restore', help="command_a help") #нет пробелов от знака =
+    rename_parser.add_argument('-o', '--output', help='path to a file where restore map is stored') #длина строки не должна превышать 79 символов
+    restore_parser = subparsers.add_parser('restore', help="command_a help")
     restore_parser.add_argument('dirname')
     restore_parser.add_argument('restore_map')
     args = parser.parse_args()
-    return args #нет отступа
+    return args #требуется больше отступов
 
 
 def main():
@@ -72,4 +71,4 @@ def main():
         sys.exit()
 
 
-main() # нет def для обозначения функции
+main()
