@@ -15,6 +15,7 @@
 
 
 #Ответ:
+
 import math
 
 def square(r):
