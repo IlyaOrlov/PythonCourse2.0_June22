@@ -1,22 +1,22 @@
 """Задание 1. Расположить инструкции программы для вычисления площади круга в правильном порядке."""
 import math
 
-radius = input("Введите радиус: ")
-
 
 def square(r):
     return math.pi * r ** 2
 
 
-result = square(int(radius))
-print(f"Площадь круга: {result}")
+if __name__ == '__main__':
+    radius = input("Введите радиус: ")
+    result = square(int(radius))
+    print(f"Площадь круга: {result}")
 
 """Задание 2. Следующая программа для вычисления среднего расхода бензина содержит различные ошибки. Необходимо их 
 найти и исправить."""
 
-start = input("Топлива было: ")
-end = input("Топлива осталось: ")
-distance = input("Расстояние: ")
-diff = int(start) - int(end)
-result = int(distance) / int(diff)
-print(f"Всего было затрачено {diff} топлива, средний расход топлива составил {result}л.")
+# start = input("Топлива было: ")
+# end = input("Топлива осталось: ")
+# distance = input("Расстояние: ")
+# diff = int(start) - int(end)
+# result = int(distance) / int(diff)
+# print(f"Всего было затрачено {diff} топлива, средний расход топлива составил {result}л.")
