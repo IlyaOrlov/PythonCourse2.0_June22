@@ -15,11 +15,10 @@
 
 
 #Ответ:
+import math
 
-    import math
-
-  def square(r):
-  return math.pi * r ** 2
+def square(r):
+return math.pi * r ** 2
 
 radius = input("Введите радиус :")
 result = square(int(radius))
