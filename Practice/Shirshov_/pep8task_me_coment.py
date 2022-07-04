@@ -26,15 +26,15 @@ class shuffler:  # имя класса должно быть CamelCase
 
     def restore(self, dirname, restore_path):
           with open(filename, '+') as f:  # убрать пробелы (2 шт.)
-            self.map = ast.literal_eval(f.read())  # убрать пробелы (4 шт.) выровнить по with
-          mp3s = []  # должен быть выровнен по self.map (удалить пробелы)
+            self.map = ast.literal_eval(f.read())
+          mp3s = []  # должен быть выровнен по self.map (удалить пробелы) выровнить по with
         for root, directories, files in os.walk(dirname):
             for file in files:
                if file[-3:] == '.mp3': # добавить пробел
                     mp3s.append({root, file})
         for path, hashname in mp3s:
             os.rename(path + '/' + hashname, path + '/' + self.map[hashname]))  # убрать одну ")" в конце
-        os.remove(restore_path)  # добавить пробелы (4 шт.) не уверен, что должна быть в цикле?
+        os.remove(restore_path)
                 
      def generateName(self, seed=time()):   # убрать пробел
           return hashlib.md5(str(seed)).hexdigest()   # убрать пробелы (2 шт.)
