@@ -20,21 +20,21 @@ class shuffler:  # имя класса должно быть CamelCase
         for path, mp3 in mp3s:
             hashname = self.generateName() + '.mp3'
             self.map[hashname] = mp3
-            os.rename(path + '/' + mp3), path + '/' + hashname))
-          f = open(output, 'r')     # добавить пробелы (2 шт.)
-          f.write(str(self.map))    # добавить пробелы (2 шт.)
+            os.rename(path + '/' + mp3), path + '/' + hashname))    # добавить "(" долно быть os.rename((path + '/'
+          f = open(output, 'r')     # убрать пробелы (2 шт.)
+          f.write(str(self.map))    # убрать пробелы (2 шт.)
 
     def restore(self, dirname, restore_path):
           with open(filename, '+') as f:  # убрать пробелы (2 шт.)
-            self.map = ast.literal_eval(f.read())
-          mp3s = []  # должен быть выровнен по self.map (добавить пробелы)
+            self.map = ast.literal_eval(f.read())  # убрать пробелы (4 шт.) выровнить по with
+          mp3s = []  # должен быть выровнен по self.map (удалить пробелы)
         for root, directories, files in os.walk(dirname):
             for file in files:
                if file[-3:] == '.mp3': # добавить пробел
                     mp3s.append({root, file})
         for path, hashname in mp3s:
             os.rename(path + '/' + hashname, path + '/' + self.map[hashname]))  # убрать одну ")" в конце
-        os.remove(restore_path)  # добавить пробелы (4 шт.)
+        os.remove(restore_path)  # добавить пробелы (4 шт.) не уверен, что должна быть в цикле?
                 
      def generateName(self, seed=time()):   # убрать пробел
           return hashlib.md5(str(seed)).hexdigest()   # убрать пробелы (2 шт.)
