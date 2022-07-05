@@ -6,7 +6,7 @@ import argparse
 from time import *
 
 
-class shuffler:  # имя класса должно быть CamelCase
+class shuffler:  # имя класса должно быть CamelCase "Shuffler"
 
     def __init__(self):
         self.map = {}
@@ -54,16 +54,16 @@ def parse_arguments():
 # добавить строку
 def main():
     args = parse_arguments()
-    Shuffler = shuffler()   # необходимо изменить имя класа на соответствующее, которое задано с верху
+    Shuffler = shuffler()   # необходимо изменить имя класа на соответствующее, shuffler = Shuffler()
     if args.subcommand == 'rename':
-          if args.output:
+          if args.output:   # лишний пробелы (2 шт.)
                 Shuffler.rename(args.dirname, 'restore.info')   # лишний пробелы (2 шт.)
-          else:
+          else:     # лишний пробелы (2 шт.)
                 Shuffler.rename(args.dirname, args.output)      # лишний пробелы (2 шт.)
     elif args.subcommand == 'restore':
         Shuffler.restore(args.dirname, args.restore_map)
     else:
         sys.exit()
-# убрать строчку
-# убрать строчку
-main()  # добавить пробелы (4 шт.)
+
+
+main()

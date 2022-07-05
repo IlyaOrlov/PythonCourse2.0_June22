@@ -53,16 +53,18 @@ def parse_arguments():
     return args
 
 # добавил строку
-def main(shuffler):
+def main():
     args = parse_arguments()
-    Shuffler = shuffler()   # необходимо изменить имя класcа на соответствующее, которое задано с верху
+    shuffler = Shuffler()   # необходимо изменить имя класcа на соответствующее, которое задано с верху
     if args.subcommand == 'rename':
-          if args.output:
-              Shuffler.rename(args.dirname, 'restore.info')   # лишний пробелы (2 шт.)
-          else:
-              Shuffler.rename(args.dirname, args.output)      # лишний пробелы (2 шт.)
+        if args.output:    # убрал пробелы (2 шт.)
+            Shuffler.rename(args.dirname, 'restore.info')   # убрал пробелы (2 шт.)
+        else:    # убрал пробелы (2 шт.)
+            Shuffler.rename(args.dirname, args.output)      # убрал пробелы (2 шт.)
     elif args.subcommand == 'restore':
         Shuffler.restore(args.dirname, args.restore_map)
     else:
         sys.exit()
-    main()  # добавил пробелы (4 шт.)
+
+
+main()
