@@ -31,10 +31,9 @@ for i in range(1, 6):
 
 while True:
     word = input("Напишите что-то: ")
-    test = word.isdigit()
     if word.lower() == 'stop':
         break
-    elif not test:
+    elif not word.isdecimal():
         print("Так не пойдет. Пиши только цифры!")
     else:
         print(len(word))
@@ -58,6 +57,46 @@ for i in tuple_phrase:
 '''6. Написать и вызвать две функции, принимающие два числа. Первая функция должна вывести на экран большее из двух 
 введённых чисел. Другая должна вернуть большее из двух введённых чисел по месту вызова. '''
 
+def fun_1(a, b):
+    print(max(a, b))
+
+
+def fun_2(a, b):
+    return max(a, b)
+
+
+fun_1(14, 67)
+print(fun_2(14, 67))
+
 '''7. Написать декоратор, выводящий "===========" до и после запуска функции.'''
 
 '''8. Написать приложение – игру "камень, ножницы, бумага".'''
+
+import random
+
+lst = ("камень", "ножницы", "бумага")
+while True:
+    player = input("Что выберешь? ")
+    if player.lower() == "стоп":
+        break
+    elif player.lower() not in lst:
+        print("Пиши грамотно, я ограничен в ответах.")
+    elif player.lower() == random.choice(lst):
+        print(f"Ничья!")
+    elif player.lower() == "камень":
+        if player.lower() == "камень" and random.choice(lst) == "ножницы":
+            print(f"Ты победил!")
+        else:
+            print(f"Ты проиграл!")
+    elif player.lower() == "ножницы":
+        if player.lower() == "ножницы" and random.choice(lst) == "бумага":
+            print(f"Ты победил!")
+        else:
+            print(f"Ты проиграл!")
+    elif player.lower() == "бумага":
+        if player.lower() == "бумага" and random.choice(lst) == "камень":
+            print(f"Ты победил!")
+        else:
+            print(f"Ты проиграл!")
+
+
