@@ -9,6 +9,6 @@ result = diff / distance
 
 # result =  distance / diff
 
-print
+
 
 # print(result)
