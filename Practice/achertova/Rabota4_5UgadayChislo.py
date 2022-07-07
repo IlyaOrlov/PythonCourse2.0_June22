@@ -11,7 +11,6 @@ while not s2.isdecimal() or int(s1) >= int(s2):
     s2 = input("Введите конец диапазона чисел еще раз: ")
 s2 = int(s2)
 number = random.randint(s1, s2)
-number = int(number)
 guess = input("Угадайте значение внутри диапазона: ")
 while not guess.isdecimal() or int(guess) <= s1 or int(guess) >= s2:
     print("Будьте внимательны! Введите целое числовое значение внутри диапазона!")
