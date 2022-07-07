@@ -7,10 +7,9 @@ def perimeter(a, b):
 
 def check_val(val):
     global flag1
-    while val.isdecimal() == True:
+    while val.isdecimal():
         flag1 = True
         return val
-        break
     else:
         print(val, "Будьте внимательнее, вводите только цифры!")
         flag1 = False
