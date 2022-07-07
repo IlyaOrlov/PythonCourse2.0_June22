@@ -2,7 +2,7 @@
 
 
 
-def average_car_speed():
+def average_car_speed(distance, time):
     return int(distance) / int(time)
 
 
@@ -10,6 +10,7 @@ def check_val(val):
     global flag1
     while val.isdecimal() == True:
         flag1 = True
+        return val
         break
     else:
         print(val, "Будьте внимательнее, вводите только цифры!")
@@ -22,7 +23,7 @@ print("Программа расчёта средней скорости авт�
 Flag_start = True
 while Flag_start:
     distance = input("Введите расстояние пройденное автомобилем (км): ")
-    check_val(distance)
+    distance = check_val(distance)
     if flag1 == True:
         break
     else:
@@ -32,13 +33,13 @@ while Flag_start:
 Flag_start = True
 while Flag_start:
     time = input("Введите потраченое время (ч): ")
-    check_val(time)
+    time = check_val(time)
     if flag1 == True:
         break
     else:
         Flag_start = True
 
 
-print(f"Средняя скорость автомобиля составила {round(average_car_speed(),2)}, \n"
+print(f"Средняя скорость автомобиля составила {round(average_car_speed(distance, time),2)} км/ч, \n"
       f"при затраченом времени {time} ч. и пройденом пути {distance} км.,\n"
       f"(!внимание результат округлен до сотых)")
