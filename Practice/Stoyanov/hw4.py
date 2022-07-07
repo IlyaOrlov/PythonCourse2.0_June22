@@ -54,6 +54,25 @@ for i in tuple_phrase:
 или не введет нечисловой символ, продолжать опрос. Если пользователь вводит неправильное число, вывести подсказку: 
 больше оно или меньше загаданного. '''
 
+import random
+
+interval_min = int(input("Нужно задать интервал. Введи минимальное число: "))
+interval_max = int(input("Введи максимальное число: "))
+number = random.randint(interval_min, interval_max)
+player = input("Теперь попробуй отгадать число из заданного тобой интервала: ")
+while True:
+    if not player.isdecimal():
+        break
+    elif int(player) == number:
+        print("Молодец! Ты угадал.")
+        break
+    elif int(player) != number:
+        if int(player) > number:
+            print(f"{player} больше загаданного мною числа.")
+        else:
+            print(f"{player} меньше загаданного мною числа.")
+    player = input("Попробуй еще раз: ")
+
 '''6. Написать и вызвать две функции, принимающие два числа. Первая функция должна вывести на экран большее из двух 
 введённых чисел. Другая должна вернуть большее из двух введённых чисел по месту вызова. '''
 
@@ -76,27 +95,26 @@ import random
 
 lst = ("камень", "ножницы", "бумага")
 while True:
-    player = input("Что выберешь? ")
-    if player.lower() == "стоп":
+    player = input("Что выберешь? ").lower()
+    comp = random.choice(lst)
+    if player == "стоп":
         break
-    elif player.lower() not in lst:
+    elif player not in lst:
         print("Пиши грамотно, я ограничен в ответах.")
-    elif player.lower() == random.choice(lst):
-        print(f"Ничья!")
-    elif player.lower() == "камень":
-        if player.lower() == "камень" and random.choice(lst) == "ножницы":
-            print(f"Ты победил!")
+    elif player == comp:
+        print(f"Ничья ты выбрал '{player}' и я '{comp}'")
+    elif player == "камень":
+        if player == "камень" and comp == "ножницы":
+            print(f"Ты победил! Ты выбрал - '{player}' а я - '{comp}'")
         else:
-            print(f"Ты проиграл!")
-    elif player.lower() == "ножницы":
-        if player.lower() == "ножницы" and random.choice(lst) == "бумага":
-            print(f"Ты победил!")
+            print(f"Ты проиграл! Ты выбрал - '{player}' а я - '{comp}'")
+    elif player == "ножницы":
+        if player == "ножницы" and comp == "бумага":
+            print(f"Ты победил! Ты выбрал - '{player}' а я - '{comp}'")
         else:
-            print(f"Ты проиграл!")
-    elif player.lower() == "бумага":
-        if player.lower() == "бумага" and random.choice(lst) == "камень":
-            print(f"Ты победил!")
+            print(f"Ты проиграл! Ты выбрал - '{player}' а я - '{comp}'")
+    elif player == "бумага":
+        if player == "бумага" and comp == "камень":
+            print(f"Ты победил! Ты выбрал - '{player}' а я - '{comp}'")
         else:
-            print(f"Ты проиграл!")
-
-
+            print(f"Ты проиграл! Ты выбрал - '{player}' а я - '{comp}'")
