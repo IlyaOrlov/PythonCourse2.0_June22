@@ -23,7 +23,7 @@ while guess != number:
         print("Загаданное число немного больше!")
     elif guess > number:
         print("Загаданное число немного меньше!")
-    guess =int(input("Попробуй еще: "))
+    guess = int(input("Попробуй еще: "))
 else:
     print("Победа! Вы угадали!")
 
