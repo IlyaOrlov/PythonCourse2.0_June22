@@ -89,6 +89,22 @@ print(fun_2(14, 67))
 
 '''7. Написать декоратор, выводящий "===========" до и после запуска функции.'''
 
+def dekor(f):
+    def wrapper(*args, **kwargs):
+        print("===========")
+        dek = f(*args, **kwargs)
+        print("===========")
+        return dek
+    return wrapper
+
+
+@dekor
+def fun():
+    print("Мой первый декоратор! :D")
+
+
+fun()
+
 '''8. Написать приложение – игру "камень, ножницы, бумага".'''
 
 import random
