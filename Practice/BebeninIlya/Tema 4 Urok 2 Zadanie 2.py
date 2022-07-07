@@ -1,4 +1,8 @@
 s = input("Введите пятизначное число: ")
-for i in s:
-    i = int(i)
-    print(f'{i }  цифра равна = {i}')
+if len(s) == 5:
+    for i in s:
+        i = int(i)
+        print(f'{i}  цифра равна = {i}')
+
+else:
+    print ("Введено неправильное значение")
