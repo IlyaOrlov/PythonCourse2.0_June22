@@ -3,4 +3,5 @@ while (s := len(input("Введите что-нибудь "))):
         print(f"Ваше число {s}")
     else:
         s = "Stop"
-        break
+        print("Stop")
+            break
