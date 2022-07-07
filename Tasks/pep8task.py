@@ -6,17 +6,17 @@ import argparse
 from time import *
 
 
-class shuffler:
+class shuffler:   # имя класс должно начинаться с заглавной
 
     def __init__(self):
         self.map = {}
 
     def rename(self, dirname, output):
-          mp3s = []
+          mp3s = []     # неверный уровень отступа
         for root, directories, files in os.walk(dirname):
             for file in files:
                 if file[-3:] == '.mp3':
-                    mp3s.append([root, file])
+                    mp3s.append([root, file])  # неверный уровень отступа
         for path, mp3 in mp3s:
             hashname = self.generateName() + '.mp3'
             self.map[hashname] = mp3
