@@ -20,14 +20,14 @@ class shuffler:   # имя класс должно начинаться с за�
         for path, mp3 in mp3s:
             hashname = self.generateName() + '.mp3'
             self.map[hashname] = mp3
-            os.rename(path + '/' + mp3), path + '/' + hashname))
+            os.rename(path + '/' + mp3), path + '/' + hashname))    #лишняя скобка
           f = open(output, 'r')
           f.write(str(self.map))
 
     def restore(self, dirname, restore_path):
           with open(filename, '+') as f:
             self.map = ast.literal_eval(f.read())
-          mp3s = []
+          mp3s = []    # неверный уровень отступа
         for root, directories, files in os.walk(dirname):
             for file in files:
                if file[-3:] == '.mp3':
@@ -36,8 +36,8 @@ class shuffler:   # имя класс должно начинаться с за�
             os.rename(path + '/' + hashname, path + '/' + self.map[hashname]))
         os.remove(restore_path)
                 
-     def generateName(self, seed=time()):
-          return hashlib.md5(str(seed)).hexdigest()
+     def generateName(self, seed=time()):   # неверный уровень отступа
+          return hashlib.md5(str(seed)).hexdigest()  # неверный уровень отступа
 
 
 def parse_arguments():
