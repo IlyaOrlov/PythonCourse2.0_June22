@@ -62,12 +62,14 @@ number = random.randint(interval_min, interval_max)
 player = input("Теперь попробуй отгадать число из заданного тобой интервала: ")
 while True:
     if not player.isdecimal():
+        print("Писать можно только цифры!")
         break
-    elif int(player) == number:
+    player = int(player)
+    if player == number:
         print("Молодец! Ты угадал.")
         break
-    elif int(player) != number:
-        if int(player) > number:
+    elif player != number:
+        if player > number:
             print(f"{player} больше загаданного мною числа.")
         else:
             print(f"{player} меньше загаданного мною числа.")
