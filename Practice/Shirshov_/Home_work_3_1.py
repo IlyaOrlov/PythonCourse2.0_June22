@@ -6,23 +6,17 @@ def perimeter(a, b):
 
 
 def check_val(mes):
-    Flag_start = True
-    while Flag_start:
+    while True:
         val = input(mes)
         if val.isdecimal():
             return val
         else:
             print(val, "Будьте внимательнее, вводите только цифры!")
-            Flag_start = True
+            True
 
 
 if __name__ == '__main__':
     print("Программа для расчёта периметра прямоугольника")
-
-
     a = check_val("Введите длину прямоугольника: ")
     b = check_val("Введите ширину прямоугольника: ")
-
-
     print(f"Периметра прямоугольника равен {perimeter(a, b)} при длине {a} и ширине {b} ")
-

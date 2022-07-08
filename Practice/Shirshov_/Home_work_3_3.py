@@ -8,18 +8,11 @@
 mask = 16061984
 
 
-flag_sart = True
-while flag_sart:
+while True:
     pas = input("Введите цивровой пароль: ")
     if pas.isdecimal():
-        pas = int(pas)
+        print(f" секретный код : {int(pas)^mask}")
         break
     else:
         print("Будте внимательнее, пароль должен состоять из цифр")
-        flag_sart = True
-
-
-scod = pas ^ mask
-
-
-print(f" секретный код : {scod}")
+        True
