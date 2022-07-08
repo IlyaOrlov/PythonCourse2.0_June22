@@ -1,15 +1,9 @@
 def fun1(a, b):
-    if a > b:
-        print(a)
-    elif b > a:
-        print(b)
+    print(max(a,b))
 
 def fun2(c, d):
-    if c > d:
-        return c
-    elif d > c:
-        return d
+        return (max(c,d))
 
-fun1(6,4)
-print(fun2(4,6))
+fun1(6,6)
+print(fun2(6,8))
 
