@@ -121,18 +121,11 @@ while True:
         print("Пиши грамотно, я ограничен в ответах.")
     elif player == comp:
         print(f"Ничья ты выбрал '{player}' и я '{comp}'")
-    elif player == "камень":
-        if player == "камень" and comp == "ножницы":
-            print(f"Ты победил! Ты выбрал - '{player}' а я - '{comp}'")
-        else:
-            print(f"Ты проиграл! Ты выбрал - '{player}' а я - '{comp}'")
-    elif player == "ножницы":
-        if player == "ножницы" and comp == "бумага":
-            print(f"Ты победил! Ты выбрал - '{player}' а я - '{comp}'")
-        else:
-            print(f"Ты проиграл! Ты выбрал - '{player}' а я - '{comp}'")
-    elif player == "бумага":
-        if player == "бумага" and comp == "камень":
-            print(f"Ты победил! Ты выбрал - '{player}' а я - '{comp}'")
-        else:
-            print(f"Ты проиграл! Ты выбрал - '{player}' а я - '{comp}'")
+    elif player == "камень" and comp == "ножницы":
+        print(f"Ты победил! Ты выбрал - '{player}' а я - '{comp}'")
+    elif player == "ножницы" and comp == "бумага":
+        print(f"Ты победил! Ты выбрал - '{player}' а я - '{comp}'")
+    elif player == "бумага" and comp == "камень":
+        print(f"Ты победил! Ты выбрал - '{player}' а я - '{comp}'")
+    else:
+        print(f"Ты проиграл! Ты выбрал - '{player}' а я - '{comp}'")
