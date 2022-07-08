@@ -3,10 +3,10 @@ import os
 import hashlib
 import ast
 import argparse
-from time import *
+from time import *     # нежелательный импорт
 
 
-class shuffler:   # имя класс должно начинаться с заглавной
+class shuffler:   # согласно CamelCase имя класса пишется слитно и каждое слово с заглавной
 
     def __init__(self):
         self.map = {}
