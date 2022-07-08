@@ -68,7 +68,7 @@ while True:
     if player == number:
         print("Молодец! Ты угадал.")
         break
-    elif player != number:
+    else:
         if player > number:
             print(f"{player} больше загаданного мною числа.")
         else:
