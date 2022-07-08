@@ -6,4 +6,3 @@ def fun2(c, d):
 
 fun1(6,6)
 print(fun2(6,8))
-
