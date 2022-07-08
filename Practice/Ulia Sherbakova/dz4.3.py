@@ -1,4 +1,4 @@
-while (s := input("Введите символ: ")) != 'stop' and s != 'Stop' and s!= 'STOP':
+while (s := input("Введите число: ")).lower() != 'stop':
     if s.isdecimal():
        print(f"{s}")
     else:
