@@ -1,6 +1,11 @@
-a = input("Введите слово: ")
+s = input("Введите слово: ")
+fs = len(s)
+es = ""
 
-if a[0]:len(a)
+for i in range(fs-1,-1,-1):
+    es += s[i]
 
-
-
+if es == s:
+    print("True")
+else:
+    print("False")
