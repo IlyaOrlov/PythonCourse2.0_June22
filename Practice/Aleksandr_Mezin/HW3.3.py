@@ -1,13 +1,18 @@
-while not (a := input("Введите цифровой пароль: ")).isdecimal():
-    pass
-    print("Ваш пароль некорректен")
-b = int(a) << 1
-print(f"Ваш секретный идентификатор: {b}")
+key = 12345
+a = input("Введите ключ: ")
+p = 1765464
 
-c = input("Введите секретный идентификатор:")
-while b != c:
-    print("секретный идентификатор некорректен" )
-    c = input("Введите секретный идентификатор:")
-c1 = int(b) >> 1
+while not int(key) == int(a):
+    print("Введите корректный ключ ")
+    a = input("Введите ключ: ")
 
+res = p ^ key
+print(f"Ваш токен, {res}")
+b = input("Введите токен ")
 
+while not int(res) == int(b):
+    print("Неверный токен:")
+    b = input("Введите токен: ")
+
+res1 = res ^ key
+print(res1)
