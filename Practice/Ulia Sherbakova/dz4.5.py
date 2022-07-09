@@ -1,6 +1,5 @@
 import random
 
-
 beg = int(input("Введите нижнюю границу диапазона: "))
 end = int(input("Введите верхнюю границу диапазона: "))
 while end < beg or end == beg:
