@@ -1,18 +1,13 @@
-key = 12345
-a = input("Введите ключ: ")
-p = 1765464
+key = 198104
+a = input("Введите пароль: ")
+p = 12345
 
-while not int(key) == int(a):
-    print("Введите корректный ключ ")
-    a = input("Введите ключ: ")
-
+while not int(a) == int(p):
+    print("Введите правильный пароль ")
+    a = input("Введите пароль: ")
 res = p ^ key
-print(f"Ваш токен, {res}")
-b = input("Введите токен ")
-
-while not int(res) == int(b):
-    print("Неверный токен:")
-    b = input("Введите токен: ")
+print(f"Ваш ключ: {res}")
 
 res1 = res ^ key
 print(res1)
+
