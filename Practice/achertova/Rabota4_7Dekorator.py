@@ -1,9 +1,18 @@
 def stroka(fun):
-    def inner(*args, **kwargs):
+    def inner(a, b):
         print("===========")
-        res = fun(*args, **kwargs)
+        res = fun(a, b)
+        print(f"{fun(a, b)}")
+        print("===========")
         return res
-    return inner()
+
+    return inner
 
 
-stroka(fun)
+def fun(a, b):
+    return a + b
+
+
+fun = stroka(fun)
+
+fun(1, 2)
