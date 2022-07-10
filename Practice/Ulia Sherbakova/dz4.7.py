@@ -15,4 +15,3 @@ def fun(a, b):
 fun = external(fun)
 
 fun(15, 30)
-
