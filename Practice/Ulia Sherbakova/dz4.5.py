@@ -5,12 +5,13 @@ end = int(input("Введите верхнюю границу диапазона
 while end < beg or end == beg:
     print(f"Верхняя граница должна быть больше нижней")
     break
-random = random.randint(beg, end)
+rand = random.randint(beg, end)
 while (s := input("Угадай число из этого диапазона: ")).isdecimal():
-    if int(s) > random:
+    s = int(s)
+    if s > rand:
         print(f"Число немного меньше {s}")
-    elif int(s) < random:
+    elif s < rand:
         print(f"Число немного больше {s}")
-    elif int(s) == random:
+    elif s == rand:
         print(f"Поздравляю, вы угадали")
         break
