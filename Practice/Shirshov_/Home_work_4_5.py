@@ -6,14 +6,6 @@ import random
 from Home_work_3_1 import check_val
 
 
-def rand_sec(mes1, mes2):
-    lst1 = []
-    for i in range(mes1, mes2+1):
-        lst1.append(i)
-    r = random.choice(lst1)
-    return int(r)
-
-
 print('Программа отгадай задуманное число')
 
 
@@ -29,7 +21,7 @@ while True:
         break
 
 
-sec = (rand_sec(n1, n2))
+sec = random.randint(n1, n2)
 #print(sec) # для проверки и отладки программы
 
 
