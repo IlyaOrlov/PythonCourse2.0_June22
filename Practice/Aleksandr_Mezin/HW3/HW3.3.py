@@ -2,7 +2,7 @@ key = 198104
 a = input("Введите пароль: ")
 p = 12345
 
-while not int(a) == int(p):
+while int(a) != (p):
     print("Введите правильный пароль ")
     a = input("Введите пароль: ")
 res = p ^ key
