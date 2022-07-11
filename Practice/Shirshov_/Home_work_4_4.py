@@ -22,4 +22,3 @@ while True:
         break
     else:
         print(f'мой ответ вам: {random.choices(ls)}')
-        True

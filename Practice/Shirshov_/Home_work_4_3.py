@@ -15,10 +15,9 @@ while True:
     if n.lower() == 'stop':
         break
     elif n.isdecimal():
-        res = res.__add__(n)
+        res = res+n
     else:
         print(n, "Пожалуйста, вводите только цифры!")
-        True
 
 
 print(f'Результат: " {res} "')

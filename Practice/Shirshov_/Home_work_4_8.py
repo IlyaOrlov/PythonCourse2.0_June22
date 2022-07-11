@@ -16,7 +16,6 @@ def check_val(val):
                     print(res, "Будьте внимательнее, не забывайте правила игры [2], [4] или [6]")
             else:
                 print(res, "Вводите только цифры.")
-                True
 
 
 def result(mes):

@@ -12,7 +12,6 @@ def check_val(mes):
             return val
         else:
             print(val, "Будьте внимательнее, вводите только цифры!")
-            True
 
 
 if __name__ == '__main__':

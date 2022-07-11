@@ -8,11 +8,11 @@ n = int(input('введите конечное число: '))
 
 
 for i in range(1, n+1):
-    st = i
-    if st % 15 == 0:
+    #st = i
+    if i % 15 == 0:
         i = 'FizzBuzz'
-    elif st % 5 == 0:
+    elif i % 5 == 0:
         i = 'Buzz'
-    elif st % 3 == 0:
+    elif i % 3 == 0:
         i = 'Fizz'
     print(i)
