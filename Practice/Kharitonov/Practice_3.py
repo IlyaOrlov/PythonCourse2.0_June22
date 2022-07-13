@@ -35,8 +35,8 @@ print(f"Маскирование : {text.replace('А', '*').replace('а', '*').r
 #является палиндромом (примеры: “Топот”, “Довод”).Программа должна выводить True или False
 #
 palidrom = input("Введите слово для проверки на палидром: ")
-palidrom1 = palidrom
-answer = palidrom1 == palidrom.lower()[::-1]
+palidrom = palidrom.lower()
+answer = palidrom == palidrom[::-1]
 print(f"{answer}")
 
 
