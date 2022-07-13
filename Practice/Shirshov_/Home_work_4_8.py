@@ -44,7 +44,7 @@ while True:
         comp = int(random.choice(n1))
         print(f'Ваш вариант: "{result(user)}"         Вариант робота Алисы: "{result(comp)}"')
         # print(comp) # только для отладки программы
-        if result(user) == result(comp):
+        if user == comp:
             print(" Ничья !!!")
         elif user == 2 and comp != 6:
             print("Ура вы победили!!!!!")
