@@ -16,8 +16,7 @@ class Duck:
             return self.other.name
 
     def __ne__(self, other):
-        self.weight < other.weight
-        return bool
+        return self.weight == other.weight
 
     def __add__(self, other):
         return self.weight + other.weight
