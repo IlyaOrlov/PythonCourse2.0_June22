@@ -11,37 +11,30 @@
 
 class Duck:
     color = 'green'
+
     def __init__(self, name, weight):
         self.duck_name = name
         self.duck_weight = weight
-
 
     @staticmethod
     def crack():
         print("кря-кря-кря")
 
-
     @classmethod
     def colors(cls):
         print(cls.color)
 
-
     def __repr__(self):
         return f'Duck({self.duck_name}, {self.color}, {self.duck_weight})'
-
 
     def __lt__(self, other):
         return self.duck_weight < other.duck_weight
 
-
     def __ne__(self, other):
         return self.duck_weight< other.duck_weight
 
-
     def __add__(self, other):
         return self.duck_weight + other.duck_weight
-
-
 
 
 duck1 = Duck('Donald', 25)

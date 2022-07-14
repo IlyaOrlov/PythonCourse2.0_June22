@@ -5,22 +5,22 @@ class Tank:
     color = "grey"
     power = 2000
     speed = 50
+
     def __init__(self,name, country, years):
         self.tank_name = name
         self.tank_country = country
         self.tank_years = years
 
-
     @staticmethod
     def bah():
         print("бах-бах-бах")
+
 
 class NewTank(Tank):
     def __init__(self, name, country, years):
         super().__init__(name, country, years)
         self.power = self.power * 2
         self.speed = self.speed * 3
-
 
     @staticmethod
     def bah():
