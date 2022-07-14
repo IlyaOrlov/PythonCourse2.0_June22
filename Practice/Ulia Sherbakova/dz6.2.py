@@ -16,7 +16,7 @@ class Duck:
             return self.other.name
 
     def __ne__(self, other):
-        return self.weight == other.weight
+        return self.weight != other.weight
 
     def __add__(self, other):
         return self.weight + other.weight
@@ -33,7 +33,7 @@ e1 = Duck("Малышка", 3)
 e2 = Duck("Крупняшка", 9)
 print(f"Вес уток равен {e1 + e2}")
 print(f"Тяжелее утка {e1 > e2}")
-print(f"Вес равен? {e1 == e2}")
+print(f"Вес равен? {e1 != e2}")
 print(e1)
 print(e2)
 Duck.what_color()
