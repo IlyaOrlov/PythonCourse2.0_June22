@@ -1,12 +1,12 @@
 def fun(arr):
-    dup = []
-    uniq = []
+    a = set()
     for i in arr:
-        if i in uniq:
-            dup.append(i)
+        if i in a:
+            print(i)
+            break
         else:
-            uniq.append(i)
-    print(dup[0])
+            a.add(i)
+
 
 
 arr = [2, 3, 4, 5, 3, 2]
