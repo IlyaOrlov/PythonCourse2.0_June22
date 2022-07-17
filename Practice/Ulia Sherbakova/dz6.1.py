@@ -5,6 +5,9 @@ class GreenTank:
         self.speed = speed
         self.power = power
 
+    def show_tank(self):
+        print(f"Модель танка: {self.model}, его мощность {self.power}, его скорость {self.speed}")
+
 class BlackTank(GreenTank):
     model = "Армата"
 
@@ -12,5 +15,5 @@ class BlackTank(GreenTank):
 e1 = GreenTank(50, 20)
 e2 = BlackTank(70, 10)
 
-print(f"Модель 1 танка: {e1.model}, его мощность {e1.power}, его скорость {e1.speed}")
-print(f"Модель 2 танка: {e2.model}, его мощность {e2.power}, его скорость {e2.speed}")
+e1.show_tank()
+e2.show_tank()
