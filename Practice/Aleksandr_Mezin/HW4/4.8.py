@@ -2,17 +2,22 @@ import random
 lst = ['камень', 'ножницы', 'бумага']
 b = input("Выберите позицию")
 c = random.choice(lst)
-if  c == b:
+win = "Вы выиграли"
+lose = "Вы проиграли"
+if c == b:
     print("ничья")
-elif b == lst[0] and c == lst[1]:
-    print("Вы проиграли")
-elif b == lst[0] and c == lst[2]:
-    print("Вы проиграли")
-elif b == lst[1] and c == lst[0]:
-    print("Вы проиграли")
-elif b == lst[1] and c == lst[2]:
-    print("Вы выиграли")
-elif b == lst[2] and c == lst[0]:
-    print("Вы выиграли")
-elif b == lst[2] and c == lst[1]:
-    print("Вы проиграли")
+if b == lst[0]:
+    if c == lst[1]:
+        print(win)
+    elif c == lst[2]:
+        print(lose)
+if b == lst[1]:
+    if c == lst[0]:
+        print(lose)
+    elif c == lst[2]:
+        print(win)
+if b == lst[2]:
+    if c == lst[0]:
+        print(win)
+    elif c == lst[1]:
+        print(lose)
