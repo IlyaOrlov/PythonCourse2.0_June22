@@ -12,32 +12,31 @@ class shuffler:
         self.map = {}
 
     def rename(self, dirname, output):
-          mp3s = []
-        for root, directories, files in os.walk(dirname):
+          mp3s = []# два лишних пробела
+        for root, directories, files in os.walk(dirname):# dirname не корректна
             for file in files:
                 if file[-3:] == '.mp3':
-                    mp3s.append([root, file])
-        for path, mp3 in mp3s:
-            hashname = self.generateName() + '.mp3'
-            self.map[hashname] = mp3
-            os.rename(path + '/' + mp3), path + '/' + hashname))
-          f = open(output, 'r')
-          f.write(str(self.map))
+                    mp3s.append([root, file]) # mp3s не корректна
+            hashname = self.generateName() + '.mp3' # self не корректна или не разрешённая
+            self.map[hashname] = mp3 #self и mp3 не корректна или не разрешена
+            os.rename(path + '/' + mp3), path + '/' + hashname)) #path mp3 не корректна и нет скобки
+          f = open(output, 'r'#нет скобки
+          f.write(str(self.map))#неразрешённая ссылка
 
     def restore(self, dirname, restore_path):
           with open(filename, '+') as f:
             self.map = ast.literal_eval(f.read())
-          mp3s = []
-        for root, directories, files in os.walk(dirname):
+          mp3s = []#лишние отступы
+        for root, directories, files in os.walk(dirname):#не корректна dirname или не разрешена
             for file in files:
                if file[-3:] == '.mp3':
-                    mp3s.append({root, file})
-        for path, hashname in mp3s:
-            os.rename(path + '/' + hashname, path + '/' + self.map[hashname]))
-        os.remove(restore_path)
+                    mp3s.append({root, file})#не корректна dirname или не разрешена и два лишних отступа
+                    for path, hashname in mp3s:#не корректна dirname или не разрешена и два лишних отступа
+            os.rename(path + '/' + hashname, path + '/' + self.map[hashname]))#?
+            os.remove(restore_path)#?
                 
-     def generateName(self, seed=time()):
-          return hashlib.md5(str(seed)).hexdigest()
+     def generateName(self, seed=time()):#лишний отступ
+          return hashlib.md5(str(seed)).hexdigest()#что то с seed
 
 
 def parse_arguments():
