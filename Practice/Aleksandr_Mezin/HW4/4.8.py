@@ -6,18 +6,18 @@ win = "Вы выиграли"
 lose = "Вы проиграли"
 if c == b:
     print("ничья")
-if b == lst[0]:
+elif b == lst[0]:
     if c == lst[1]:
         print(win)
-    elif c == lst[2]:
+    else:
         print(lose)
-if b == lst[1]:
+elif b == lst[1]:
     if c == lst[0]:
         print(lose)
-    elif c == lst[2]:
+    else:
         print(win)
-if b == lst[2]:
+elif b == lst[2]:
     if c == lst[0]:
         print(win)
-    elif c == lst[1]:
+    else:
         print(lose)
