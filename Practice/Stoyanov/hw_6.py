@@ -1,26 +1,26 @@
 '''1. Спроектировать классы (один или несколько) для игры в танки и создать экземпляры этих классов.'''
 
-# class Tank:
-#     color = "Green"
-#
-#     def __init__(self, power, speed):
-#         self.power = power
-#         self.speed = speed
-#
-#     @staticmethod
-#     def move():
-#         print("Танка поехал.")
-#
-#     @staticmethod
-#     def shoot():
-#         print("Танка выстрелил.")
-#
-#
-# t1 = Tank(500, 70)
-# t2 = Tank(300, 100)
-# t1.move()
-# t2.shoot()
-# print(Tank.color)
+class Tank:
+    color = "Green"
+
+    def __init__(self, power, speed):
+        self.power = power
+        self.speed = speed
+
+    @staticmethod
+    def move():
+        print("Танка поехал.")
+
+    @staticmethod
+    def shoot():
+        print("Танка выстрелил.")
+
+
+t1 = Tank(500, 70)
+t2 = Tank(300, 100)
+t1.move()
+t2.shoot()
+print(Tank.color)
 
 '''2. Спроектировать класс Duck, при создании экземпляров которого будут задаваться атрибуты name, weight, 
 а атрибут color должен быть общим для всех экземпляров класса. Также в классе должны быть методы:
