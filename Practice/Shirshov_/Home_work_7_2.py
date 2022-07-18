@@ -16,7 +16,8 @@ class Man:
 class Pupil(Man):
 
     def solve_task_new(self):
-        return time.sleep(random.randint(3, 6)), super().solve_task()
+        time.sleep(random.randint(3, 6))
+        super().solve_task()
 
 
 men1 = Man("Rembo")

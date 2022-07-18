@@ -25,7 +25,7 @@ class Duck:
         print(f'  Цвет- {cls.color}')
 
     def __repr__(self):
-        return print(f'Информация об утке:\n  Имя- {self.duck_name} Вес - {self.duck_weight}')
+        print(f'Информация об утке:\n  Имя- {self.duck_name} Вес - {self.duck_weight}')
 
     def __lt__(self, other):
         if self.duck_weight < other.duck_weight:
@@ -40,18 +40,18 @@ class Duck:
         return self.duck_weight + other.duck_weight
 
 
-duck1 = Duck('Donald', 25)
+duck1 = Duck('Donald', 35)
 duck2 = Duck('Krek', 30)
 
 
 lst_duck = [duck1, duck2]
 
 for i in lst_duck:
-    info  =  i.__repr__()
-    crack_inf = i.crack()
-    color_inf = i.colors()
+    i.__repr__()
+    i.crack()
+    i.colors()
 
 
-print(f'=====================\n какая утка больше весит? - {duck1.__lt__(duck2)}')
-print(f' вес уток не равен? - {duck1.__ne__(duck2)}')
-print(f' суммарный вес уток равен = {duck1.__add__(duck2)}')
+print(f'=====================\n какая утка больше весит? - {duck1 < duck2}')
+print(f' вес уток не равен? - {duck1 != duck2}')
+print(f' суммарный вес уток равен = {duck1 + duck2}')
