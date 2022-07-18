@@ -18,20 +18,23 @@ class Duck:
 
     @staticmethod
     def crack():
-        print("кря-кря-кря")
+        print("  Издает звук: кря-кря-кря")
 
     @classmethod
     def colors(cls):
-        print(cls.color)
+        print(f'  Цвет- {cls.color}')
 
     def __repr__(self):
-        return f'Duck({self.duck_name}, {self.color}, {self.duck_weight})'
+        return print(f'Информация об утке:\n  Имя- {self.duck_name} Вес - {self.duck_weight}')
 
     def __lt__(self, other):
-        return self.duck_weight < other.duck_weight
+        if self.duck_weight < other.duck_weight:
+            return other.duck_name
+        else:
+            return self.duck_name
 
     def __ne__(self, other):
-        return self.duck_weight< other.duck_weight
+        return self.duck_weight != other.duck_weight
 
     def __add__(self, other):
         return self.duck_weight + other.duck_weight
@@ -41,7 +44,14 @@ duck1 = Duck('Donald', 25)
 duck2 = Duck('Krek', 30)
 
 
-print(f'{duck1.__repr__()} \n {duck2.__repr__()}')
-print(duck2.__lt__(duck1))
-print(duck2.__ne__(duck1))
-print(duck1.__add__(duck2))
+lst_duck = [duck1, duck2]
+
+for i in lst_duck:
+    info  =  i.__repr__()
+    crack_inf = i.crack()
+    color_inf = i.colors()
+
+
+print(f'=====================\n какая утка больше весит? - {duck1.__lt__(duck2)}')
+print(f' вес уток не равен? - {duck1.__ne__(duck2)}')
+print(f' суммарный вес уток равен = {duck1.__add__(duck2)}')

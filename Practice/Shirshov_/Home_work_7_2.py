@@ -15,15 +15,13 @@ class Man:
 
 class Pupil(Man):
 
-    @staticmethod
-    def solve_task(mes1, mes2):
-        sek = random.randint(mes1, mes2)
-        #print(f"{time.sleep(sek)} I'm not ready yet")
-        (time.sleep(sek)), print(f"I'm not ready yet")
+    def solve_task_new(self):
+        return time.sleep(random.randint(3, 6)), super().solve_task()
 
 
 men1 = Man("Rembo")
 men2 = Pupil("Tom")
 
+
 men1.solve_task()
-men2.solve_task(3, 6)
+men2.solve_task_new()

@@ -6,14 +6,18 @@ class Tank:
     power = 2000
     speed = 50
 
-    def __init__(self,name, country, years):
+    def __init__(self, name, country, years):
         self.tank_name = name
         self.tank_country = country
         self.tank_years = years
 
     @staticmethod
+    def show():
+        return print(f'название - {i.tank_name} , мощность: {i.power}, скорость : {i.speed}')
+
+    @staticmethod
     def bah():
-        print("бах-бах-бах")
+        return print("бах-бах-бах")
 
 
 class NewTank(Tank):
@@ -27,11 +31,13 @@ class NewTank(Tank):
         print("бам!!! бам!!!")
 
 
-t1 = Tank('T34', 'RU', '1943')
+t1_T34 = Tank('T34', 'RU', '1943')
 t_new = NewTank('new_T34', 'RU', '2000')
+t2_Tiger = Tank('Tiger', 'RU', '1992')
 
-lst = [t1, t_new]
+lst = [t1_T34, t_new, t2_Tiger]
 
 
 for i in lst:
-    print(f'название - {i.tank_name} , мощность: {i.power}, скорость : {i.speed}')
+    information = i.show()
+    babah = i.bah()
