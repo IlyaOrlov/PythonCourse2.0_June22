@@ -24,9 +24,10 @@ from time import sleep
 from random import randint
 
 
-class Pupil:
+class Pupil(Man):
 
     def __init__(self, name):
+        super().__init__(name)
         self.name = name
 
     @staticmethod
