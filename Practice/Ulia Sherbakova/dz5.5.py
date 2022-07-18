@@ -1,11 +1,13 @@
-f = open("1.txt", "r")
-a = input("Введите 'n' для сворачивания и 'k' для разворачивания табуляции: ")
-with open("1.txt", "r") as f:
-    for i in f:
-        if a == "n":
-            print(i.replace("\n", "    "))
+f2 = open("2.txt", "w")
+a = input("Введите 't' для сворачивания и 'k' для разворачивания табуляции: ")
+
+with open("1.txt", "r") as f1:
+    for i in f1:
+        if a == 't':
+            s = repr(i.replace("\t", "    "))
+            f2.write(s)
         elif a == 'k':
-            print(i.replace("    ", "\n"))
+            s = repr(i.replace("    ", "\t"))
+            f2.write(s)
         else:
-            print("Ошибка! Введите 0 или 1")
-f.close()
+            print("Ошибка! Введите 't' или 'k'")
