@@ -11,3 +11,4 @@ with open("1.txt", "r") as f1:
             f2.write(s)
         else:
             print("Ошибка! Введите 't' или 'k'")
+f2.close()
