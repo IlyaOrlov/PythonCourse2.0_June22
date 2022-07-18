@@ -30,11 +30,10 @@ class Pupil(Man):
         super().__init__(name)
         self.name = name
 
-    @staticmethod
-    def solve_task():
+    def solve_task(self):
         print(f"{name} думает...")
         sleep(randint(3, 6))
-        print("I'm not ready yet.")
+        super().solve_task()
 
 
 name = input("Введите ваше имя: ")
