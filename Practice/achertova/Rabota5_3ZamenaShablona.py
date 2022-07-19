@@ -4,3 +4,4 @@ for k, v in impotozameschenie.items():
     s = s.replace(k, v)
 print(s)
 
+
