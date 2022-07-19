@@ -1,0 +1,6 @@
+netops.microsoft.com - - [01/Jul/1995:07:43:07 -0400] "GET /history/gemini/gemini.html HTTP/1.0" 200 2522
+mcdiala09.it.luc.edu - - [01/Jul/1995:07:43:08 -0400] "GET /shuttle/countdown/ HTTP/1.0" 200 3985
+pm2_9.digital.net - - [01/Jul/1995:07:43:08 -0400] "GET /shuttle/sts-71/sts-71-patch-small.gif HTTP/1.0" 200 12054
+p1107.pip.dknet.dk - - [01/Jul/1995:07:43:08 -0400] "GET /cgi-bin/imagemap/countdown?333,188 HTTP/1.0" 302 97
+netops.microsoft.com - - [01/Jul/1995:07:43:09 -0400] "GET /images/gemini-logo.gif HTTP/1.0" 200 4452
+p1107.pip.dknet.dk - - [01/Jul/1995:07:43:10 -0400] "GET /shuttle/countdown/lps/fr.html HTTP/1.0" 200 1879
