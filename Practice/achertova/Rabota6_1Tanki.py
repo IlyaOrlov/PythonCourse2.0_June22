@@ -8,15 +8,15 @@ class LandingTank:
         return f"{self.protection} {self.weight} tank for {self.use}"
 
     @staticmethod
-    def moveright():
+    def move_right():
         print(f"=>")
 
     @staticmethod
-    def moveleft():
+    def move_left():
         print(f"<=")
 
     @staticmethod
-    def averagespeed(s, t):
+    def average_speed(s, t):
         v = s / t
         return v
 
@@ -26,11 +26,14 @@ class Amphibian:
     swimby = "sidefloat"
     maxspeed = 44
 
-    def swim(self):
+    @staticmethod
+    def swim():
         print("Bul`k")
 
-    def shoot(self):
+    @staticmethod
+    def shoot():
         print(f"***")
+
 
 MarkIX = LandingTank()
 AAV7 = LandingTank()
@@ -38,5 +41,9 @@ T38 = Amphibian()
 T33 = Amphibian()
 
 T33.swim()
-AAV7.moveleft()
+AAV7.move_left()
 T38.shoot()
+MarkIX.s = 100
+MarkIX.t = 2
+v = MarkIX.average_speed(MarkIX.s, MarkIX.t)
+print(f"Сегодня средняя скорость MarkXI составила {v} км/ч")
