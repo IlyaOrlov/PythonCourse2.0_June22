@@ -8,8 +8,9 @@ def fun(arr):
             for j in i:
                 if j == a:
                     del(arr[count1][count2])
-            count1 += 1
-        count2 += 1
+                    count2 += 1
+            else:
+                count1 += 1
     print(arr)
 
 arr = [
