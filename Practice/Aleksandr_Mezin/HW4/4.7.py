@@ -8,10 +8,9 @@ def dek(fun):
     return inner
 
 
+@ dek
 def fun(a, b):
     return a + b
 
-
-fun = dek(fun)
 
 fun(100, 200)
