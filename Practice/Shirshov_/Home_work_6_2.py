@@ -25,7 +25,7 @@ class Duck:
         print(f'  Цвет- {cls.color}')
 
     def __repr__(self):
-        print(f'Информация об утке:\n  Имя- {self.duck_name} Вес - {self.duck_weight}')
+        return (f'Информация об утке:\n  Имя- {self.duck_name} \n  Вес - {self.duck_weight}')
 
     def __lt__(self, other):
         if self.duck_weight < other.duck_weight:
@@ -47,7 +47,7 @@ duck2 = Duck('Krek', 30)
 lst_duck = [duck1, duck2]
 
 for i in lst_duck:
-    i.__repr__()
+    print(i)
     i.crack()
     i.colors()
 
