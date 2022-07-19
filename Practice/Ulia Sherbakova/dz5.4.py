@@ -1,16 +1,20 @@
-import numpy as np
-
 def fun(arr):
-    a = 5
+    a = 20
     s = len(arr)
-    c = 0
-    while c < s - 1:
+    count1 = 0
+    count2 = 0
+    while count1 < s - 1 and count2 < s - 1:
         for i in arr:
             for j in i:
                 if j == a:
-                    np.delete(arr, c, 0)
-        c += 1
+                    del(arr[count1][count2])
+            count2 += 1
+        count1 += 1
     print(arr)
 
-arr = [[1, 5, 8], [7, 2, 9], [4, 3, 1]]
+arr = [
+       [1, 20, 20],
+       [18, 21, 18],
+       [21, 20, 19]
+]
 fun(arr)
