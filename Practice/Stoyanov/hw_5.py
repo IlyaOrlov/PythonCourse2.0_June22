@@ -10,19 +10,14 @@ arr = [0,3,24,2,3,7]
 
 arr = [0, 3, 24, 2, 3, 7]
 x = 0
-i = 0
-j = 0
 k = 0
 for i in arr:
     min_ = i
-    # print(f"уровень 1: i = {i}, j = {j}, x = {x}, min = {min_}")
-    for j in arr[k + 1: len(arr)]:
-        # print(f"уровень 2: i = {i}, j = {j}, x = {x}, min = {min_}")
+    for j in arr[k + 1:]:
         if j <= min_:
             min_ = j
     y = arr.index(min_, x, len(arr))
     arr[x], arr[y] = arr[y], arr[x]
-    # print(arr)
     k += 1
     x += 1
 print(arr)
@@ -31,21 +26,21 @@ print(arr)
 для  списка [2, 3, 4, 5, 3, 2] функция должна вернуть 3.'''
 
 def search(lst):
+    set_ = set()
     for i in lst:
-        if i in lst2:
+        if i in set_:
             print(i)
             break
-        lst2.add(i)
+        set_.add(i)
 
 
 lst = [2, 3, 4, 5, 3, 2]
-lst2 = set()
 search(lst)
 
 '''3. Найти и заменить некие шаблоны в строке: есть строка с определенного вида форматированием, необходимо заменить 
 в этой строке все вхождения шаблонов на их значение из словаря.'''
 
-def repl(string):
+def repl(string, dictionary):
     for k in dictionary.keys():
         string = string.replace(k, dictionary[k])
     return string
@@ -54,7 +49,7 @@ def repl(string):
 dictionary = {"мб": "может быть", "спс": "спасибо", "с др": "с днем рождения", }
 # Пример ввода: Поздравляю с др, желаю реже видеть спс и тогда мб все будет хорошо.
 string = input("Напишите предложение: ")
-a = repl(string)
+a = repl(string, dictionary)
 print(a)
 
 '''4. Есть список списков (матрица). Каждый внутренний список – это строка матрицы. Необходимо реализовать функцию, 
