@@ -1,18 +1,16 @@
 def fun(arr):
-    a = 20
+    a = 5
     s = len(arr)
-    count1 = 0
-    count2 = 0
-    while count1 < s and count2 < s:
+    c = 0
+    while c < s - 1:
         for i in arr:
             for j in i:
                 if j == a:
-                    del(arr[count1][count2])
-                    count1 += 1
-                    count2 += 1
+                    arr.pop(c)
+        c += 1
     print(arr)
 
-arr = [[20, 20, 20],
-       [18, 21, 18],
-       [21, 20, 19]]
+
+
+arr = [[1, 5, 8], [7, 2, 9], [4, 3, 1]]
 fun(arr)
