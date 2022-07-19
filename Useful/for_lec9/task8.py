@@ -27,3 +27,22 @@ for i in mi:
 # print(next(it))
 # print(next(it))
 # print(next(it))
+
+
+class FileIter:
+    def __init__(self, file_name):
+        self.file = open(file_name, 'r')
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        for line in self.file:
+            return line
+
+        self.file.close()
+        raise StopIteration
+
+
+for i in FileIter('./logfile.txt'):
+    print(f'Line: {i}')
