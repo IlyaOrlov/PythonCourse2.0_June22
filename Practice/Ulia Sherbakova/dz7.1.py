@@ -2,7 +2,8 @@ class Man:
     def __init__(self, name):
         self.name = name
 
-    def solve_task(self):
+    @staticmethod
+    def solve_task():
         print(f"I'm not ready yet.")
 
 man1 = Man("ivan")
