@@ -12,9 +12,8 @@ class Man:
         print("I'm not ready yet.")
 
 
-name = input("Введите ваше имя: ")
-m = Man(name)
-print(m.name)
+name_0 = input("Введите ваше имя: ")
+m = Man(name_0)
 m.solve_task()
 
 '''2. Написать класс Pupil, у которого переопределен метод solve_task. На этот раз он будет думать от 3 до 6 секунд 
@@ -26,16 +25,16 @@ from random import randint
 
 class Pupil(Man):
 
-    def __init__(self, name):
-        super().__init__(name)
-        self.name = name
-
     def solve_task(self):
-        print(f"{name} думает...")
+        print(f"{self.name} думает...")
         sleep(randint(3, 6))
         super().solve_task()
 
 
-name = input("Введите ваше имя: ")
-p = Pupil(name)
-p.solve_task()
+name_1 = input("Введите ваше имя: ")
+p_1 = Pupil(name_1)
+p_1.solve_task()
+
+name_2 = input("Введите ваше имя: ")
+p_2 = Pupil(name_2)
+p_2.solve_task()
