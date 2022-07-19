@@ -22,9 +22,9 @@ class Duck:
     def __lt__(self, other):
         return self.weight < other.weight
 
-
-    def who_is_heavier(self, other, a):
-        if a := True:
+    def who_is_heavier(self, other):
+        a = self < other
+        if a is True:
             print(f"{other.name}")
         else:
             print(f"{self.name}")
@@ -32,21 +32,20 @@ class Duck:
     def __ne__(self, other):
         return self.weight != other.weight
 
-    def bool(self, b):
-        return bool(b)
+    # def bool(self, b):
+    #     return bool(b)
     # ne и bool не совсем поняла, что требуется в задании. Сделала так, что через ne проверяется неравенство,
     # а через bool выводится True(Не равны) или False(Равны)
 
     def __add__(self, other):
         return self.weight + other.weight
 
+
 d1 = Duck("Gena", 3)
 d2 = Duck("Terminator", 7)
 Duck.duckcolor()
-a = d1 < d2
-Duck.who_is_heavier(d1, d2, a)
-b = Duck.__ne__(d1, d2)
-print(bool(b))
-print(d1 + d2)
+Duck.who_is_heavier(d2, d1)
+print(f"Вес уток отличается: {d1 != d2}")
+print(f"Общий вес уток: {d1 + d2} кг")
 
 
