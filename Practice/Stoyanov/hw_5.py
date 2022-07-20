@@ -75,4 +75,32 @@ print(f"{matrix[0]}\n{matrix[1]}\n{matrix[2]}")
 на вход передается файл, необходимо заменить все символы табуляции на четыре пробела, либо же заменить все комбинации из
 четырех символов пробела на символ табуляции (в зависимости от опции, указанной пользователем).'''
 
+# with open("test.txt", "w") as f:
+#     f.write(("1 0")*10)
 
+print("tab - заменит (1 пробел) на (4 пробела)")
+print("space - заменит (4 пробела) на (1 пробел)")
+choice = input("Что выберете? ").lower()
+with open("test.txt", "r") as f:
+    file = f.read()
+
+
+def write(new_file):
+    with open("test.txt", "w") as f:
+        f.write(new_file)
+    print("Готово!")
+
+
+while True:
+    if choice == "tab":
+        new_file = file.replace(" ", " "*4)
+        write(new_file)
+        break
+    elif choice == "space":
+        new_file = file.replace(" "*4, " ")
+        write(new_file)
+        break
+    else:
+        print("Не понимаю тебя.")
+        choice = input("tab или space? ")
+        continue
