@@ -1,5 +1,5 @@
 import tempfile
-import os, sys
+import os
 
 class WrapStrToFile:
     def __init__(self):
@@ -15,7 +15,7 @@ class WrapStrToFile:
         except FileNotFoundError:
             return(f"Файл еще не существует")
         else:
-            return(self._content)
+            return self._content
 
         # попытка чтения из файла, в случае успеха возвращаем содержимое
         # в случае неудачи возвращаем 'File doesn't exist'
