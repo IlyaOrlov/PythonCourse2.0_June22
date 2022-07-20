@@ -38,28 +38,31 @@ while True:
     else:
         print(f'Ваше число : {n}')
 
+
 # 7.Написать декоратор, выводящий "===========" до и после запуска функции.
 
-def dec1(fn):
-    def wr():
+def dec(fan):
+    def wr(a, b):
         print('===========')
-        fn()
+        vr = fan(a, b)
+        print(f'{fan(a, b)}')
         print('============')
+        return vr
 
     return wr
 
 
-def dec2():
-    print('ДЕКОРАТОР')
+def fan(a, b):
+    return a * b
 
-dec2 = dec1(dec2)
-dec2()
+
+fn = dec(fan)
+fn(4, 4)
 
 # 8.Написать приложение – игру "камень, ножницы, бумага".
 
 
 import random
-
 
 while True:
     user = input("Сделайте выбор — камень, ножницы или бумага: ")
