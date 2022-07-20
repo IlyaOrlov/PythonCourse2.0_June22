@@ -8,7 +8,7 @@ def dek(fun):
     return inner
 
 
-@ dek
+@dek
 def fun(a, b):
     return a + b
 
