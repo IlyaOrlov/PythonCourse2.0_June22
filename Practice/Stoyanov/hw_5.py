@@ -8,6 +8,17 @@ arr = [0,3,24,2,3,7]
 // здесь реализованный алгоритм
 // на выходе должен получиться список, содержащий [0, 2, 3, 3, 7, 24]"""
 
+def index_min(k, min_):
+    global index_min_
+    index_min_ = k
+    index_ = k + 1
+    for j in arr[k + 1:]:
+        if j <= min_:
+            min_ = j
+            index_min_ = index_
+        index_ += 1
+
+
 arr = [0, 3, 24, 2, 3, 7]
 x = 0
 k = 0
@@ -16,8 +27,8 @@ for i in arr:
     for j in arr[k + 1:]:
         if j <= min_:
             min_ = j
-    y = arr.index(min_, x, len(arr))
-    arr[x], arr[y] = arr[y], arr[x]
+    index_min(k, min_)
+    arr[x], arr[index_min_] = arr[index_min_], arr[x]
     k += 1
     x += 1
 print(arr)
@@ -56,20 +67,28 @@ print(a)
 которая удаляет столбец, который содержит заданную цифру.'''
 
 def del_(matrix, num):
-    for n, x in enumerate(matrix):
-        if num in x:
-            i = x.index(num)
+    for x in enumerate(matrix):
+        if num in x[1]:
+            i = x[1].index(num)
             for k in matrix:
                 del k[i]
 
 
-matrix = [[21, 22, 23, 24, 25],
-          [26, 27, 28, 29, 30],
-          [31, 32, 33, 34, 35]]
-print(f"{matrix[0]}\n{matrix[1]}\n{matrix[2]}")
+matrix = [
+    [21, 22, 23, 24, 25],
+    [26, 27, 28, 29, 30],
+    [31, 32, 33, 34, 35],
+    [36, 37, 38, 39, 40],
+    [41, 42, 43, 44, 45]
+]
+for j in matrix:
+    print(j)
+
 num = int(input("Чтобы удалить столбец введите цифру которая в нем содержится: "))
 del_(matrix, num)
-print(f"{matrix[0]}\n{matrix[1]}\n{matrix[2]}")
+
+for j in matrix:
+    print(j)
 
 '''5. Реализовать функциональность, которая бы “сворачивала” и “разворачивала” символы табуляции в файле. То есть, 
 на вход передается файл, необходимо заменить все символы табуляции на четыре пробела, либо же заменить все комбинации из
@@ -78,18 +97,18 @@ print(f"{matrix[0]}\n{matrix[1]}\n{matrix[2]}")
 # with open("test.txt", "w") as f:
 #     f.write(("1 0")*10)
 
-print("tab - заменит (1 пробел) на (4 пробела)")
-print("space - заменит (4 пробела) на (1 пробел)")
-choice = input("Что выберете? ").lower()
-with open("test.txt", "r") as f:
-    file = f.read()
-
-
 def write(new_file):
     with open("test.txt", "w") as f:
         f.write(new_file)
     print("Готово!")
 
+
+print("tab - заменит (1 пробел) на (4 пробела)")
+print("space - заменит (4 пробела) на (1 пробел)")
+choice = input("Что выберете? ").lower()
+
+with open("test.txt", "r") as f:
+    file = f.read()
 
 while True:
     if choice == "tab":
