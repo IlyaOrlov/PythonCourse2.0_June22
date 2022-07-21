@@ -6,8 +6,4 @@ for i in lst:
         break
     s.add(i)
 
-#Готово
-
-
-
 
