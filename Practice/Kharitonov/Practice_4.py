@@ -95,7 +95,7 @@ def dec(fan):
     def wr(a, b):
         print('===========')
         vr = fan(a, b)
-        print(f'{fan(a, b)}')
+        print(f'{vr}')
         print('============')
         return vr
 
