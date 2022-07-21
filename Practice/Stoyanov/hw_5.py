@@ -9,7 +9,6 @@ arr = [0,3,24,2,3,7]
 // на выходе должен получиться список, содержащий [0, 2, 3, 3, 7, 24]"""
 
 def index_min(k, min_):
-    global index_min_
     index_min_ = k
     index_ = k + 1
     for j in arr[k + 1:]:
@@ -17,6 +16,7 @@ def index_min(k, min_):
             min_ = j
             index_min_ = index_
         index_ += 1
+    return index_min_
 
 
 arr = [0, 3, 24, 2, 3, 7]
@@ -27,8 +27,7 @@ for i in arr:
     for j in arr[k + 1:]:
         if j <= min_:
             min_ = j
-    index_min(k, min_)
-    arr[x], arr[index_min_] = arr[index_min_], arr[x]
+    arr[x], arr[index_min(k, min_)] = arr[index_min(k, min_)], arr[x]
     k += 1
     x += 1
 print(arr)
@@ -67,10 +66,10 @@ print(a)
 которая удаляет столбец, который содержит заданную цифру.'''
 
 def del_(matrix, num):
-    for x in enumerate(matrix):
+    for x in matrix:
         while True:
-            if num in x[1]:
-                i = x[1].index(num)
+            if num in x:
+                i = x.index(num)
                 for k in matrix:
                     del k[i]
             else:
