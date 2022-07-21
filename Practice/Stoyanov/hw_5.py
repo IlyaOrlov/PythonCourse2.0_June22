@@ -68,16 +68,19 @@ print(a)
 
 def del_(matrix, num):
     for x in enumerate(matrix):
-        if num in x[1]:
-            i = x[1].index(num)
-            for k in matrix:
-                del k[i]
+        while True:
+            if num in x[1]:
+                i = x[1].index(num)
+                for k in matrix:
+                    del k[i]
+            else:
+                break
 
 
 matrix = [
     [21, 22, 23, 24, 25],
     [26, 27, 28, 29, 30],
-    [31, 32, 33, 34, 35],
+    [31, 32, 33, 33, 35],
     [36, 37, 38, 39, 40],
     [41, 42, 43, 44, 45]
 ]
