@@ -27,7 +27,8 @@ for i in arr:
     for j in arr[k + 1:]:
         if j <= min_:
             min_ = j
-    arr[x], arr[index_min(k, min_)] = arr[index_min(k, min_)], arr[x]
+    res = index_min(k, min_)
+    arr[x], arr[res] = arr[res], arr[x]
     k += 1
     x += 1
 print(arr)
