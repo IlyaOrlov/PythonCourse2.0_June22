@@ -1,0 +1,6 @@
+something = input("Введите: ")
+#print("Echo " + something)
+something_else = input("Введите ещё что нибудь: ")
+print(f"Echo: {something}")
+print(f"Echo: {something_else}")
+print(f"Echo: {something_else}")
