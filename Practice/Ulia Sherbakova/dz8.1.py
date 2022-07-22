@@ -20,5 +20,3 @@ n = 1
 print(next(it))
 n = 2
 print(next(it))
-
-
