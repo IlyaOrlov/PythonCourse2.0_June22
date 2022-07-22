@@ -30,3 +30,13 @@ else:
 #
 text = input("Слово :")
 print(f"Маскирование : {text.replace('А', '*').replace('а', '*').replace('A', '*').replace('a', '*')}")
+#
+#5. Написать программу, проверяющую, что слово, введённое пользователем,
+#является палиндромом (примеры: “Топот”, “Довод”).Программа должна выводить True или False
+#
+palidrom = input("Введите слово для проверки на палидром: ")
+palidrom = palidrom.lower()
+answer = palidrom == palidrom[::-1]
+print(f"{answer}")
+
+
