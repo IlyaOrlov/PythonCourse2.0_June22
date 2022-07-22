@@ -3,7 +3,7 @@ import time
 
 class TestManager:
     def __enter__(self):
-        print('Starting code inside manager')
+        print('Starting code.')
     def __exit__(self, exc_type, exc_val, exc_tb):
         print('Code completed.')
 
