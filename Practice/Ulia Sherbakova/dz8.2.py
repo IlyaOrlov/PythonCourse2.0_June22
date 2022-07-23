@@ -1,8 +1,7 @@
 def fun():
-    file = open("1.txt", 'r')
-    for line in file:
-        yield line
-    file.close()
+    with open("1.txt", "r") as file:
+        for line in file:
+            yield line
 
 
 f = fun()
