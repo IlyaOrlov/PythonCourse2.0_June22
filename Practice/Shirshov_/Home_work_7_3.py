@@ -47,7 +47,7 @@ class NewBank(Bankomat):
         if self.n_country != 'RU' and self._online is True:
             return super().online_o + ' и доступна операция перевода заграницу'
         else:
-            return super().online_o + ', но операция перевода заграницу пока не доступна!'
+            return super().online_o + ', и не доступна операция перевода заграницу!'
 
 
 b1 = Bankomat('Alfa', 3000, True)
