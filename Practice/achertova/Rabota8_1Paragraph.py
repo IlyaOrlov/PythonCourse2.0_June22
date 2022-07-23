@@ -1,18 +1,18 @@
 class MyIter:
-	def __init__(self, str):
+	def __init__(self, s):
 		self.j = 0
 		self.i = 0
-		self.str = str
+		self.s = s
 
 	def __iter__(self):
 		return self
 
 	def __next__(self):
-		if self.i < len(str):
-			while str[self.i] != "/":
+		if self.i < len(s):
+			while s[self.i] != "/":
 				self.i += 1
 			else:
-				a = str[self.j:self.i]
+				a = s[self.j:self.i]
 				self.j = self.i
 				self.i += 1
 				return a
@@ -20,8 +20,8 @@ class MyIter:
 			raise StopIteration
 
 
-str = "Python /стал /одним из самых /популярных языков/"
-mi = MyIter(str)
+s = "Python /стал /одним из самых /популярных языков/"
+mi = MyIter(s)
 it = iter(mi)
 print(next(it))
 print(next(it))
