@@ -19,6 +19,7 @@ class MyIter:
 		else:
 			raise StopIteration
 
+
 str = "Python /стал /одним из самых /популярных языков/"
 mi = MyIter(str)
 it = iter(mi)
