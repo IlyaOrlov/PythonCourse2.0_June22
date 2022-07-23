@@ -53,6 +53,3 @@ b3.online_plategi(9000)
 lst = [b1, b2, b3]
 for b in lst:
     print(b)
-
-
-
